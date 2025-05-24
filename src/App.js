@@ -2,10 +2,12 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
 import { AuthProvider } from "./contexts/AuthContext"
 import HomePage from "./components/HomePage"
 import AuthPage from "./components/AuthPage"
-import ProtectedRoute from "./components/ProtectedRoute"
-import AdminSetup from "./components/AdminSetup"
 import AdminDashboard from "./components/AdminDashboard"
 import AddEmployee from "./components/AddEmployee"
+import EmployeeHome from "./components/EmployeeHome"
+import CalendarView from "./components/CalendarView"
+import ProtectedRoute from "./components/ProtectedRoute"
+import AdminSetup from "./components/AdminSetup"
 
 function App() {
   return (
@@ -36,6 +38,22 @@ function App() {
               element={
                 <ProtectedRoute userType="admin">
                   <AddEmployee />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/employeehome"
+              element={
+                <ProtectedRoute userType="employee">
+                  <EmployeeHome />
+                </ProtectedRoute>
+              }
+            />
+            <Route
+              path="/calendar/:employeeId"
+              element={
+                <ProtectedRoute>
+                  <CalendarView />
                 </ProtectedRoute>
               }
             />
