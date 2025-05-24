@@ -1,0 +1,54 @@
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Environment variables
+.env
+.env.*
+
+# Logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Build output
+dist/
+build/
+out/
+
+# VSCode settings
+.vscode/
+
+# Coverage reports
+coverage/
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Azure deployment files
+.azure/
+*.azure*
+
+# IDE files
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Misc
+*.swp
+*.bak
+*.orig
+
+
+.env
