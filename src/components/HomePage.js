@@ -1,6 +1,9 @@
 import { Users, Clock, Shield, CheckCircle, ArrowRight, Star } from "lucide-react"
+import { useNavigate  } from "react-router-dom"
 
 function HomePage() {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50">
       {/* Navigation */}
@@ -14,7 +17,9 @@ function HomePage() {
               <span className="ml-3 text-xl font-bold text-gray-900">AttendEase</span>
             </div>
             <div className="flex items-center space-x-4">
-              <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg hover:scale-105 inline-flex items-center">
+              <button className="bg-indigo-600 hover:bg-indigo-700 text-white px-6 py-2.5 rounded-lg text-sm font-medium transition-all duration-200 hover:shadow-lg hover:scale-105 inline-flex items-center"
+              onClick={() => navigate("/auth")}
+              >
                 Login
                 <ArrowRight className="ml-2 h-4 w-4" />
               </button>
@@ -47,7 +52,9 @@ function HomePage() {
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-200 inline-flex items-center shadow-lg hover:shadow-xl hover:scale-105">
+            <button className="bg-gradient-to-r from-indigo-600 to-blue-600 hover:from-indigo-700 hover:to-blue-700 text-white px-8 py-4 rounded-lg text-lg font-medium transition-all duration-200 inline-flex items-center shadow-lg hover:shadow-xl hover:scale-105"
+            onClick={() => navigate("/auth")}
+            >
               Get Started Free
               <CheckCircle className="ml-2 h-5 w-5" />
             </button>
